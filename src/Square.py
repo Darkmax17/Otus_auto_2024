@@ -33,3 +33,4 @@ s = Square(10)
 r = Rectangle(3, 5)
 
 total_area = s.area + r.area
+total_perimeter = s.perimeter + r.perimeter

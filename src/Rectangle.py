@@ -23,3 +23,6 @@ class Square(Rectangle):
 
 r = Rectangle(3, 5)
 s = Square(5)
+
+total_area = r.area + s.area
+total_perimeter = r.perimeter + s.perimeter
