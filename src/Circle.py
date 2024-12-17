@@ -10,6 +10,10 @@ class Circle:
     def area(self):
         return math.pi * (self.radius ** 2)
 
+    @property
+    def perimeter(self):
+        return 2 * math.pi * self.radius
+
 class Square(Circle):
     def __init__(self, side_a):
         super().__init__(side_a / math.sqrt(2))
@@ -29,5 +33,6 @@ try:
     s = Square(5)
 
     total_area = s.add_area(c)
+    circle_perimeter = c.perimeter
 except ValueError as e:
     pass

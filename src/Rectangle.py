@@ -16,6 +16,7 @@ class Rectangle:
             raise TypeError("Argument figure must be a class Rectangle or child class")
         return self.area + figure.area
 
+
 class Square(Rectangle):
     def __init__(self, side_a):
         super().__init__(side_a, side_a)
