@@ -28,7 +28,9 @@ class Rectangle(Square):
             raise TypeError("Argument figure must be a class Square or child class")
         return self.area + figure.area
 
+
 s = Square(10)
 r = Rectangle(3, 5)
 
 total_area = s.area + r.area
+

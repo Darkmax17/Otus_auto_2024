@@ -21,7 +21,6 @@ class Square:
     def __init__(self, side_a):
         self.side_a = side_a
 
-
     @property
     def area(self):
         return self.side_a * 2
