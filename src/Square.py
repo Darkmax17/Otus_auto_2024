@@ -33,4 +33,3 @@ s = Square(10)
 r = Rectangle(3, 5)
 
 total_area = s.area + r.area
-

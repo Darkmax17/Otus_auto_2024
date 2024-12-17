@@ -23,3 +23,4 @@ class Square(Rectangle):
 
 r = Rectangle(3, 5)
 s = Square(5)
+

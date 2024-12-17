@@ -30,3 +30,4 @@ s = Square(5)
 
 total_area = t.area + s.area
 total_perimeter = t.perimeter
+
