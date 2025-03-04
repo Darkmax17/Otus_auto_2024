@@ -1,6 +1,5 @@
 import requests
 
-
 def test_url_status(url_and_status_code):
     url, expected_status_code = url_and_status_code
     response = requests.get(url)

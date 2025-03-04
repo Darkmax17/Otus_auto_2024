@@ -1,4 +1,3 @@
-import os
 import json
 import pytest
 from files import JSON_FILE_all_sub_breeds, JSON_FILE_all_breeds, JSON_FILE_all_images, JSON_FILE_breweries_id

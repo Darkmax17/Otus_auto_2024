@@ -9,7 +9,6 @@ def test_gectaro_get_resource_requests(request, gectaro_key_project):
     response = requests.get(url, headers={'Authorization': key})
     assert response.status_code == requests.codes.ok, f'Ошибка: ожидался статус-код 200, но получен {response.status_code}'
 
-
 @pytest.mark.parametrize("unnormal_key", ['_xbYD3PwYW0N11-ycESdZY0eFudvy-QE'], ids=['string'])
 def test_gectaro_get_resource_requests_neg(request, gectaro_key_project, unnormal_key):
     baseurl = request.config.getoption('--url')

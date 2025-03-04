@@ -3,7 +3,6 @@ import pytest
 
 """Тесты API https://www.openbrewerydb.org/"""
 
-
 @pytest.mark.parametrize("count", [3, 5, 2], ids=['integer', 'integer', 'integer'])
 def test_breweries_random(base_data_for_brew, count):
     base_url, *_ = base_data_for_brew

@@ -3,7 +3,6 @@ import pytest
 
 """Тесты API https://jsonplaceholder.typicode.com/"""
 
-
 @pytest.mark.parametrize("user_id", [3, 5, 2], ids=['integer', 'integer', 'integer'])
 def test_jsonplaceholder_users_get(base_data_for_jsonplaceholder, user_id):
     base_url, *_ = base_data_for_jsonplaceholder

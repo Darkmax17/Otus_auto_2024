@@ -3,7 +3,6 @@ import pytest
 
 """Тесты API https://dog.ceo/dog-api/"""
 
-
 def test_dogs_random(base_data_for_dogs):
     random_url = 'breeds/image/random'
     response = requests.get(base_data_for_dogs.base_url + random_url)
