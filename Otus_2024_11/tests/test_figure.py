@@ -36,6 +36,7 @@ def test_sides_negative():
         r = Rectangle(0, -2)
 
 
+
 def test_figure_negative():
     with pytest.raises(ValueError):
         c = Circle(5)

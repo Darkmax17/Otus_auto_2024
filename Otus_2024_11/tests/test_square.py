@@ -56,6 +56,7 @@ def test_add_area_positive(figure1, figure2, expected_area):
 
 
 @pytest.mark.parametrize(
+
     "figure1, figure2",
     [
         (Square(2), 10),

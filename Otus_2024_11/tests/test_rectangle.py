@@ -6,6 +6,7 @@ from triangle import Triangle
 
 
 @pytest.mark.parametrize(
+
     "side_a,side_b,area", [(3, 5, 15), (3.5, 5.5, 19.25)], ids=["integer", "float"]
 )
 @pytest.mark.smoke

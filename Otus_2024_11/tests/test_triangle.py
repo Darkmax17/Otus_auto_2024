@@ -93,6 +93,7 @@ def test_add_area_positive(figure1, figure2, expected_area):
 )
 @pytest.mark.triangle
 @pytest.mark.negative
+
 def test_add_area_not_figure(figure1, figure2):
     with pytest.raises(ValueError, match="В метод add_area передана не геометрическая фигура"):
         figure1.add_area(figure2)
