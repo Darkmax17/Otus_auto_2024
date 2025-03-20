@@ -50,9 +50,8 @@ def test_triangle_incorrect_values(side_a, side_b, side_c):
 @pytest.mark.negative
 @pytest.mark.triangle
 def test_triangle_sum_of_the_sides(side_a, side_b, side_c):
-    r = Triangle(side_a, side_b, side_c)
-    assert r.side_a + r.side_b <= r.side_c or r.side_b + r.side_c <= r.side_a or r.side_c + r.side_a <= r.side_b, \
-        f"Треугольник существует только тогда, когда сумма двух его сторон больше третьей"
+    with pytest.raises(ValueError):
+        Triangle(side_a, side_b, side_c)
 
 
 @pytest.mark.parametrize(
@@ -64,8 +63,8 @@ def test_triangle_sum_of_the_sides(side_a, side_b, side_c):
 @pytest.mark.negative
 @pytest.mark.triangle
 def test_triangle_three_sides(side_a, side_b, side_c):
-    r = Triangle(side_a, side_b, side_c)
-    assert r.side_a is None or r.side_b is None or r.side_c is None, f"Должны быть переданы все три стороны треугольника"
+    with pytest.raises(ValueError, match="Должны быть переданы все три стороны треугольника"):
+        Triangle(side_a, side_b, side_c)
 
 
 @pytest.mark.parametrize(
@@ -93,7 +92,6 @@ def test_add_area_positive(figure1, figure2, expected_area):
 )
 @pytest.mark.triangle
 @pytest.mark.negative
-
 def test_add_area_not_figure(figure1, figure2):
     with pytest.raises(ValueError, match="В метод add_area передана не геометрическая фигура"):
         figure1.add_area(figure2)
